@@ -27,6 +27,7 @@ router.get('/about', function(req, res) {
 
 carsRouter.get('/', function(req, res) {
 	// INDEX
+	res.send('This is the index route')
 });
 
 carsRouter.get('/:id', function(req, res) { 
