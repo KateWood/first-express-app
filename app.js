@@ -41,11 +41,16 @@ carsRouter.post('/', function(req, res) {
 });
 
 carsRouter.get('/:id/edit', function(req, res) { 
-// SHOW });
+	// SHOW
+});
 
-carsRouter.put('/:id', function(req, res) { // UPDATE });
+carsRouter.put('/:id', function(req, res) { 
+	// UPDATE 
+});
 
-carsRouter.delete('/:id', function(req, res) { // DELETE });
+carsRouter.delete('/:id', function(req, res) { 
+	// DELETE 
+});
 
 app.use("/cars", carsRouter)
 
