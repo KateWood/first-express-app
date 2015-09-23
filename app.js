@@ -3,6 +3,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 var router = express.Router();
 var carsRouter = express.Router();
+var bodyParser = require('body-parser');
 
 app.get('/', function(req, res) {
 	res.send('Hello World');
@@ -52,9 +53,11 @@ carsRouter.delete('/:id', function(req, res) {
 	// DELETE 
 });
 
-app.use("/cars", carsRouter)
+app.use("/cars", carsRouter);
 
 app.use('/', router);
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
